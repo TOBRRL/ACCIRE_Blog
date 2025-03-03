@@ -105,5 +105,9 @@ deploy:
   repo: https://github.com/TOBRRL/ACCIRE_Blog.git
   branch: main
 
+theme_config:
+  # 注意需要将下列配置增加在 theme_config 中，并保持相对缩进
+  custom_file_path:
+    style: source/_data/styles.styl
 
 
