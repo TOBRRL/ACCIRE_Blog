@@ -580,16 +580,16 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # For more information: https://github.com/next-theme/pjax
-pjax: false
+pjax: true
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: false
+fancybox: true
 
 # Medium Zoom is a JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
 # For more information: https://medium-zoom.francoischalifour.com
-mediumzoom: false
+mediumzoom: true
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
@@ -631,7 +631,7 @@ motion:
   duration: 200
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
-    menu_item: fadeInDown
+    menu_item: fadeIn
     post_block: fadeIn
     post_header: fadeInDown
     post_body: fadeInDown
@@ -642,10 +642,10 @@ motion:
 # Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace
 pace:
-  enable: false
+  enable: true
   # All available colors:
   # black | blue | green | orange | pink | purple | red | silver | white | yellow
-  color: blue
+  color: orange
   # All available themes:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
@@ -656,8 +656,8 @@ pace:
 canvas_ribbon:
   enable: false
   size: 300 # The width of the ribbon
-  alpha: 0.6 # The transparency of the ribbon
-  zIndex: -1 # The display level of the ribbon
+  alpha: 0.3 # The transparency of the ribbon
+  zIndex: 1 # The display level of the ribbon
 
 
 # ---------------------------------------------------------------
@@ -755,10 +755,10 @@ isso: # <data_isso>
 
 # AddToAny Share. See: https://www.addtoany.com
 addtoany:
-  enable: false
+  enable: true
   buttons:
-    - facebook
-    - twitter
+    - github
+    - x
 
 
 # ---------------------------------------------------------------
