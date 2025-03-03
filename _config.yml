@@ -5,9 +5,9 @@
 # Site
 title: Hexo
 subtitle: ''
-description: ''
+description: '轻弹一首别离，名为茉莉雨'
 keywords:
-author: John Doe
+author: ACCIRE
 language: en
 timezone: ''
 
@@ -96,9 +96,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/TOBRRL/ACCIRE_Blog.git
+  branch: main
+
