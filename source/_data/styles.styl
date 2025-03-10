@@ -1,34 +1,86 @@
-element.style {
+// 覆盖 --content-bg-color 变量
+:root {
+  --content-bg-color: #2d2d2d;  // 比背景稍亮的深灰色
 }
+
+// 内容区域样式
+.post-block, .comments {
+  color: #ffffff;  // 白色文字
+  padding: 40px;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);  // 浅色边框
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  // 微弱阴影
+}
+
+// 链接样式
+.post-block a, .comments a {
+  color: #00ff00;  // 绿色链接
+  text-decoration: none;
+  border-bottom: 1px solid #00ff00;  // 绿色下划线
+}
+
+// 代码块样式
+.highlight {
+  background: #3d3d3d;  // 比内容区域稍亮的深灰色
+  color: #ffffff;  // 白色文字
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+// CRT 扫描线动画（超丝滑，不卡顿）
+@keyframes scanline {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 200%;
+  }
+}
+
+// 定义扫描线颜色
+scanline-color = rgba(128, 128, 128, 0.08)
+
+// 复古 CRT 背景颜色
+crt-bg = #1a1a1a  // 深灰色，接近老式 CRT 屏幕
+
+body {
+  background: crt-bg;
+  font-family: 'Courier New', Courier, monospace;  // 复古等宽字体
+  color: #00ff00;  // 经典绿色
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.1);  // 绿色发光效果
+}
+
+// 扫描线
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    scanline-color 0px,
+    scanline-color 3px,
+    transparent 5px
+  );
+  background-size: 100% 100px;  // **关键：让扫描线更加连续**
+  background-position: 0 0;
+  animation: scanline 100s linear infinite;  // **8s 可以改成 10s 或更慢**
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.7;
+}
+
+// 按钮样式（调整为复古风格）
 .btn {
-    background: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    color: var(--btn-default-color);
-    display: inline-block;
-    font-size: 0.875em;
-    line-height: 2;
-    padding: 0 20px;
-    transition: background-color 0.2sease-in-out;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #00ff00;  // 绿色边框
+  background: transparent;
+  color: #00ff00;  // 绿色文字
+  padding: 10px 20px;
+  font-family: 'Courier New', Courier, monospace;  // 复古等宽字体
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);  // 绿色发光效果
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
-a {
-    border-bottom: 1px solid #999;
-    color: var(--link-color);
-    cursor: pointer;
-    outline: 0;
-    text-decoration: none;
-    overflow-wrap: break-word;
-}
-
-a {
-    background: transparent;
-}
-user agent stylesheet
-
-.post-button {
-    /* right: auto; */
-    margin-top: 40px;
-    text-align: right;
-}
-
