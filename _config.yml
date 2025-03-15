@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: ACCIRE's Blog
+title: 
 subtitle: ''
 description: '轻弹一首别离，名为茉莉雨'
 keywords:
@@ -109,5 +109,6 @@ theme_config:
   # 注意需要将下列配置增加在 theme_config 中，并保持相对缩进
   custom_file_path:
     style: source/_data/styles.styl
+    layout: source/_data/layout.njk
 
 

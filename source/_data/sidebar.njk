@@ -1,0 +1,8 @@
+<div class="tags-card">
+  <h3 class="tags-card-title">标签</h3>
+  <div class="tags-list">
+    {% for tag in site.tags %}
+      <a href="{{ url_for(tag.path) }}" class="tag" style="background-color: {{ getRandomColor() }};">{{ tag.name }}</a>
+    {% endfor %}
+  </div>
+</div>

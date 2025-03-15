@@ -3,13 +3,27 @@
   --content-bg-color: #2d2d2d;  // 比背景稍亮的深灰色
 }
 
+// 调整第一篇博客内容与顶部的间距
+.post-block:first-child {
+  margin-top: 100px; // 调整第一篇博客内容与顶部的间距
+}
+
 // 内容区域样式
 .post-block, .comments {
   color: #ffffff;  // 白色文字
-  padding: 40px;
+  padding: 40px;  // 减少内边距
+  
   border-radius: 10px !important;
   border: 1px solid rgba(255, 255, 255, 0.1);  // 浅色边框
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  // 微弱阴影
+  max-width: 800px;  // 限制内容区域的最大宽度
+  margin: 0 auto;  // 居中显示
+  margin-bottom: 26px //内容之间间距
+}
+
+// 调整文本内容的外边距
+.post-body {
+  margin:  0 15px; // 上下边距 10px，左右边距 0
 }
 
 // 链接样式
@@ -27,6 +41,8 @@
   border-radius: 5px;
   overflow-x: auto;
 }
+
+
 
 // CRT 扫描线动画（超丝滑，不卡顿）
 @keyframes scanline {
@@ -77,12 +93,138 @@ body::after {
 .btn {
   border: 2px solid #00ff00;  // 绿色边框
   background: transparent;
-  color: #00ff00;  // 绿色文字
+  color:rgb(255, 255, 255);  // 绿色文字
   padding: 10px 20px;
   font-family: 'Courier New', Courier, monospace;  // 复古等宽字体
   text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);  // 绿色发光效果
   transition: background-color 0.2s ease-in-out;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+
+
+// 阅读全文按钮位置
+.post-button {
+    margin-top: 15px;
+    text-align: right;
+}
+
+
+
+
+
+
+//菜单栏设计
+// 自定义菜单栏样式
+.custom-header {
+  position: fixed; // 固定定位
+  top: 103px; // 距离顶部 
+  left: 1600px; // 距离左侧 
+  z-index: 1000; // 确保菜单栏在最上层
+  animation: fadeInDown 1s;
+}
+
+.header-card {
+  background-color: #2d2d2d; // 背景颜色
+  padding: 20px; // 内边距
+  border-radius: 10px; // 圆角
+  border: 2px solid #00ff00; // 绿色边框
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); // 阴影效果
+  width: 250px; // 卡片宽度
+  text-align: center; // 内容居中
+}
+
+.header-avatar img {
+  width: 80px; // 头像大小
+  height: 80px;
+  border-radius: 20%; // 圆形头像
+  border: 2px solid #00ff00; // 绿色边框
+  margin-bottom: 15px;
+}
+
+.header-title h1 {
+  color: #00ff00; // 绿色标题
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+.header-title p {
+  color: #ffffff; // 白色文字
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: column; // 垂直排列菜单项
+  gap: 10px; // 菜单项间距
+}
+
+.header-menu a {
+  color: #ffffff; // 白色文字
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-menu a:hover {
+  color: #00ff00; // 鼠标悬停时变为绿色
+}
+
+// 调整博客内容的上边距
+.container {
+  margin-top: 120px; // 根据菜单栏高度调整
+}
+
+// 隐藏站点标题栏的容器
+.site-meta {
+    padding: 20px 0;
+    display: none;
+}
+
+
+
+
+// 小卡片样式标签
+.tags-card {
+  background-color: #2d2d2d; // 卡片背景颜色
+  padding: 20px; // 内边距
+  border-radius: 10px; // 圆角
+  border: 2px solid #00ff00; // 边框
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); // 阴影
+  margin-bottom: 20px; // 卡片之间的间距
+}
+
+// 卡片标题样式
+.tags-card-title {
+  color: #00ff00; // 标题颜色
+  font-size: 20px; // 标题字体大小
+  margin-bottom: 15px; // 标题与标签列表的间距
+}
+
+// 标签列表样式
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; // 标签之间的间距
+}
+
+// 标签样式
+.tag {
+  display: inline-block;
+  padding: 5px 10px; // 标签内边距
+  border-radius: 15px; // 圆角
+  color: #ffffff; // 标签文字颜色
+  font-size: 14px; // 标签字体大小
+  text-decoration: none; // 去掉下划线
+  transition: all 0.3s ease; // 过渡效果
+}
+
+// 鼠标悬停效果
+.tag:hover {
+  transform: translateY(-2px); // 悬停时上移
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // 悬停时阴影
 }
 
 // test
